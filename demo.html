@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>树形结构目录</title>		
+	</head>
+	<body>
+
+
+		<div id="tree_list"></div>
+
+
+		<script type="text/javascript" src="jq.js" ></script>
+		<script type="text/javascript" src="lstree.js" ></script>
+		<script>
+
+			var data = [{
+				id: 1,
+				pid: 0,
+				name: '我是根',
+				childs: [{
+					id: 2,
+					pid: 1,
+					name: '2222222'
+				},{
+					id: 3,
+					pid: 1,
+					name: '3333333',
+					childs: [{
+						id: 5,
+						pid: 3,
+						name: '3的孩子',
+						childs: [{
+							id: 10,
+							pid: 5,
+							name: '101010',
+							childs: [{
+								id: 11,
+								pid: 10,
+								name: '10的孩子',
+								childs: []
+							},{
+								id: 12,
+								pid: 10,
+								name: '10的女儿'
+							}]
+						}]
+					},{
+						id: 6,
+						pid: 3,
+						name: '3的女儿'
+					}]
+				},{
+					id: 4,
+					pid: 1,
+					name: '4444444'
+				},{
+					id: 7,
+					pid: 1,
+					name: '7777777',
+					childs: [{
+						id: 8,
+						pid: 7,
+						name: '7的孩子',
+						childs: []
+					},{
+						id: 9,
+						pid: 7,
+						name: '7的女儿'
+					}]
+				}]
+			}]
+
+
+			$.lsTree({
+				el: '#tree_list',
+				data: data,
+				treeState: 1,
+				hasCheckBox: true,
+				onClick: function(target){
+					console.log(target);
+				}
+			});
+
+		</script>
+	</body>	
+</html>
+ 

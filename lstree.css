@@ -1,0 +1,17 @@
+[lstree] { padding: 10px; line-height: 24px; font-size: 14px; user-select: none; -webkit-user-select: none; }
+[lstree] ul { margin: 0; padding: 0 5px 0 26px; list-style: none; height: 24px; overflow: hidden; position: relative; }
+[lstree] .state-flag { position: absolute; left: 4px; top: 7px; z-index: 2; width: 12px; height: 12px; background: #666; cursor: pointer; }
+[lstree] .state-flag:before, [lstree] .state-flag:after { content: ''; position: absolute; top: 0; right: 0; bottom: 0; left: 0; height: 1px; width: 8px; margin: auto; background: #fff; }
+[lstree] .state-flag:after { height: 8px; width: 1px; }
+[lstree] .tree-open { height: auto; }
+[lstree] .tree-open > .state-flag:after { display: none; }
+[lstree] .tree-title { cursor: pointer; }
+[lstree] li { position: relative; }
+[lstree] li:before { content: ''; position: absolute; top: 0; left: -16px; width: 10px; height: 14px; border-left: 1px solid #aaa; border-bottom: 1px solid #aaa; }
+[lstree] .checkbox { float: left; width: 14px; height: 14px; margin-right: 5px; margin-top: 5px; border: 1px solid #aaa; cursor: pointer; background: #fff; -webkit-box-sizing: border-box; box-sizing: border-box; }
+[lstree] .checkbox:before, [lstree] .checkbox:after { content: ''; -webkit-transition: all 0.3s; transition: all 0.3s; }
+[lstree] .checkbox.checked { border: none; background: #398DEE; position: relative; }
+[lstree] .checkbox.checked:before, [lstree] .checkbox.checked:after { content: ''; position: absolute; top: 8px; left: 2px; height: 1px; width: 5px; background: #fff; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
+[lstree] .checkbox.checked:after { width: 10px; left: 4px; top: 6px; -webkit-transform: rotate(-55deg); transform: rotate(-55deg); }
+[lstree] .checkbox.half-checked { border: 2px solid #fff; outline: 1px solid #aaa; background: #398DEE; }
+[lstree] .checkbox.half-checked:before, [lstree] .checkbox.half-checked:after { display: none; }
